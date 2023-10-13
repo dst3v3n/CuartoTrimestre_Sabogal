@@ -12,6 +12,8 @@ def decorador(funcion):
 def lista():
     try:
       lista = [random.randrange(0, 100) for i in range(1, 30)]
+
+
     except NameError:
         print('Error:el valor introducido no compatible a (100)')
     return lista
@@ -31,7 +33,7 @@ def promedioLista(lista):
 def moda(lista):
     Moda = None
     Cantidad = 0
-    for index, numero in enumerate(lista):
+    for numero in lista:
         cantidadVecesAparece = lista.count(numero)
         if cantidadVecesAparece > Cantidad:
             Cantidad = cantidadVecesAparece
@@ -50,7 +52,7 @@ def ordenar_lista(lista):
 
 @decorador
 def mediana(lista):
-    data = sorted(lista)
+    data = ordenar_lista(lista)
     index = len(data) // 2    
     if len(lista) % 2 != 0:
         return data[index]
@@ -58,8 +60,7 @@ def mediana(lista):
 
 @decorador
 def varianza(lista):
-
-    media = sum(lista) / len(lista)
+    media = promedioLista(lista)
     sumacuadrados = sum((x - media) ** 2 for x in lista)
     varianza = sumacuadrados / len(lista)
     
@@ -67,7 +68,6 @@ def varianza(lista):
 
 @decorador
 def desviacionestandar(lista):
-    resta = []
     elevado = []
     s = 0
     tam = len(lista)
@@ -84,12 +84,12 @@ def desviacionestandar(lista):
 
 
 num = lista()
-# print(num)
-# print(sumaLista(num))
-# print(promedioLista(num))
+print(num)
+print(sumaLista(num))
+print(promedioLista(num))
 print(moda(num))
-# print(ordenar_lista(num))
-# print(mediana(num))
-# print(varianza(num))
-# print(desviacionestandar(num))
-# print(desviacionestandar(num))
+print(ordenar_lista(num))
+print(mediana(num))
+print(varianza(num))
+print(desviacionestandar(num))
+print(desviacionestandar(num))
