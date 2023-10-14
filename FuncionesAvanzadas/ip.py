@@ -23,9 +23,10 @@ def conversion (args):
     return tupla
 
 def validacion (args):
-    if not (len(args) > 1): 
+    if len(args) == 1 and type(args) == tuple: 
         for i in args:
-            args = i
+            if not (type (i)):
+                args = i
     direc = []
     for i in args:
         octeto = ""
@@ -41,16 +42,18 @@ def validacion (args):
             if not(i >= 0 and i <= 255):
                 raise ValueError
         return True
+    
     except ValueError:
         print("El ip ingresada no es valida")
 
 @ip
 def ip_class (args):
     validar = False
-    if not (len(args) > 1): 
+    if len(args) == 1 and type(args) == tuple: 
         for i in args:
-            args = i
-            validar = True
+            if not (type (i)):
+                args = i
+                validar = True
     tupla = conversion (args)
     lista = []
     for i in tupla:
@@ -107,7 +110,6 @@ def ip_priv_publi (args):
         else:
             print(f"{i} IP PUBLICA")
 
-
 @ip
 def ip_subnetting (args):
     lista = ip_class(args)
@@ -127,9 +129,8 @@ def ip_subnetting (args):
         elif i == "Clase E":
             print("La mascara en decimal es: 255.255.255.255")
             print("La mascara en CIDR es: /32")
-        
-        
-ip_class("127.88.5.5" , "20.14.50.30")
-ip_host("127.88.5.5" , "20.14.50.30")
-ip_priv_publi("172.31.255.255","192.168.255.255")
-ip_subnetting("127.88.5.5" , "20.14.50.30")
+             
+ip_class("127.880.5.5" , "127.880.5.5")
+ip_host("127.88.5.5")
+ip_priv_publi("172.3100.255.255")
+ip_subnetting("127.880.5.5")
