@@ -25,7 +25,7 @@ def conversion (args):
 def validacion (args):
     if len(args) == 1 and type(args) == tuple: 
         for i in args:
-            if not (type (i)):
+            if not (type (i) == str):
                 args = i
     direc = []
     for i in args:
@@ -51,7 +51,7 @@ def ip_class (args):
     validar = False
     if len(args) == 1 and type(args) == tuple: 
         for i in args:
-            if not (type (i)):
+            if not (type (i) == str):
                 args = i
                 validar = True
     tupla = conversion (args)
@@ -130,7 +130,7 @@ def ip_subnetting (args):
             print("La mascara en decimal es: 255.255.255.255")
             print("La mascara en CIDR es: /32")
              
-ip_class("127.880.5.5" , "127.880.5.5")
+ip_class("127.88.5.5" , "127.880.5.5")
 ip_host("127.88.5.5")
-ip_priv_publi("172.3100.255.255")
-ip_subnetting("127.880.5.5")
+ip_priv_publi("172.31.255.255")
+ip_subnetting("127.88.5.5")
