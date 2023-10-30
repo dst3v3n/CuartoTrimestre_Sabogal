@@ -15,3 +15,13 @@ response=requests.post(url,json=json.dumps(argumentos),headers=theheaders)
 decodetest=response.content.decode()
 print('*'*20)
 print(decodetest)
+
+url="https://httpbin.org/delete"
+response = requests.delete(url)
+print(response.status_code.decode())
+print(response.content)
+
+url="https://httpbin.org/put"
+response = requests.put(url)
+print(response.status_code.decode())
+print(response.content)
