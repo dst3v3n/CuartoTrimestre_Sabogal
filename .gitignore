@@ -1,2 +1,4 @@
 django/env
 django/grupo3629/__pycache__
+django/usuarios/__pycache__
+django/usuarios/migrations/__pycache__

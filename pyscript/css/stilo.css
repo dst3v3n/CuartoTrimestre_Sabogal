@@ -117,14 +117,11 @@ footer a:hover {
 }
 
 body {
-    background-image: url(imagen2.png);
+    /* background-image: url(img/imagen2.png); */
+    /* background-image: url(imagen2.png); */
     background-repeat: no-repeat;
     background-size: 45rem;
     background-position-x: center;
     background-position-y: center;
     background-blend-mode: overlay;
 }
-/* 
-#py-1f0d6e48-de25-dc4b-8dfa-20c0404915d7-2 {
-    color: white;
-} */

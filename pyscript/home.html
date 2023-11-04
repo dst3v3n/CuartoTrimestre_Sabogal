@@ -1,13 +1,9 @@
-{%load static%}
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>ADSO SENA</title>
-  <link rel="stylesheet" href="{%static 'css/stilo.css'%}">
-  <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+  <link rel="stylesheet" href="/css/stilo.css">
   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
 </head>
@@ -15,7 +11,7 @@
   <header>
     <div class="barra-negra">
       <div class="img">
-        <img class="imagen1" src="{%static 'img/imagen1.png'%}" alt="Imagen 1">
+        <img class="imagen1" src="/img/imagen1.png" alt="Imagen 1">
       </div>
       <h1>Programa ADSO del SENA</h1>
     </div>
@@ -30,16 +26,6 @@
   <main class="content">
     <aside class="izquierda">
       <aside id="informacion-general">
-        <py-env>
-          - django
-          - paths:
-            - {% static 'aprendiendo/hola.py' %}
-        </py-env>
-        <!-- <py-script src="{% static 'aprendiendo/hola.py' %}"></py-script> -->
-        <py-script style="color: #DAFDBA;">
-          import hola
-          print(hola.h1("Hola Mucho Gusto"))
-        </py-script>
         <h2>Información general</h2>
         <p>El programa ADSO del SENA forma tecnólogos en análisis y desarrollo de software.</p>
         <p>El programa cuenta con una etapa lectiva que tiene una duración de 1 año y 4 meses y se divide en 5 trimestres.</p>
@@ -90,6 +76,19 @@
     <p>Copyright © 2023 SENA</p>
     <a href="#">Política de privacidad</a>
     <a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/">SENA</a>
+    <!-- <py-script src="hola.py"></py-script> -->
+    <py-env>
+      - paths:
+        - /aprendiendo/hola.py
+    </py-env>
+    <!-- <div id="plot"></div> -->
+    <!-- <py-script output="plot"> -->
+    <py-script>
+      import hola
+      print(hola.xd("harold"))
+      print(hola.imprimir())
+      print(hola.how_are_you(10 , 20))
+    </py-script>
   </footer>
 </body>
 </html>
