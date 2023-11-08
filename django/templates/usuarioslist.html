@@ -1,0 +1,34 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ADSO SENA</title>
+  <link rel="stylesheet" href="{%static 'css/stilo.css'%}">
+</head>
+<body>
+  <header>
+  <table>
+    <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Documento</th>
+          <th>Ficha</th>
+          <th>Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usr in get_usuarios %}
+    <tr>
+      <td>{{usr.nombre}}</td>
+      <td>{{usr.documento}}</td>
+      <td>{{usr.ficha}}</td>
+      <td><img src="{{usr.photo.url}}" width="50" height="50" > </td>
+    </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <footer>
+</body>
+</html>
