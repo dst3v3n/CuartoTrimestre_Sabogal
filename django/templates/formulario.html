@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de documentos</title>
+    <link rel="stylesheet" href="{% static 'css/stilos.css' %}">
+</head>
+
+<body>
+    <form action="{% url 'formulario' %}" method="post" enctype="multipart/form-data"> {% csrf_token %}
+        <h1>Formulario de documentos</h1>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+        </div>
+        <div class="form-group">
+            <label for="documento">Documento</label>
+            <input type="number" class="form-control" id="documento" name="documento">
+        </div>
+        <div class="form-group">
+            <label for="ficha">Ficha</label>
+            <input type="number" class="form-control" id="ficha" name="ficha">
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto</label>
+            <input type="file" class="form-control" id="foto" name="foto">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</body>
+
+</html>
