@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9AEBA3;
+}
+
 th , td {
     color: white;
 }

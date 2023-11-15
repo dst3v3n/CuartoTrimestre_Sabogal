@@ -18,4 +18,4 @@ def metodo_post (request):
         ficha = request.POST['ficha']
         foto = request.FILES['foto']
         Usuario(nombre = nombre , documento = documento , ficha = ficha , photo = foto).save()
-        return render(request , 'usuarioslist.html') 
+        return usuariolist(request)
